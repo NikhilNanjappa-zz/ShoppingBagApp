@@ -1,0 +1,183 @@
+<div class="row title">
+  <h1>YOUR SHOPPING BAG</h1>
+</div>
+
+<section class="row product-section">
+    <div class="row product-table">
+      <div class="col-md-2 col-sm-3 col-xs-3"></div>
+      <div class="col-md-5 col-sm-3 col-xs-3">{{ number_of_products }} Items</div>
+      <div class="col-md-1 col-sm-2 col-xs-2 inmobile-hide">SIZE</div>
+      <div class="col-md-2 col-sm-2 col-xs-2 text-center inmobile-hide">QTY</div>
+      <div class="col-md-2 col-sm-2 col-xs-2 inmobile-hide">PRICE</div>
+    </div>
+    <div class="row product-details" ng-repeat="product in products">
+      <div class="col-md-2 col-xs-3">
+        <img class="img-responsive" ng-src="{{ product.p_src }}">
+      </div>
+      <div class="col-md-10 col-xs-9">
+        <div class="row">
+          <div class="col-md-12">
+            <p>{{ product.p_variation | uppercase }} {{ product.p_name | uppercase }}</p>
+          </div>
+          <div class="col-md-12">
+            <p>Style: {{ product.p_style }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <p>Color: {{ product.p_selected_color.name }}</p>
+          </div>
+          <div class="col-md-2">
+            <p><span class="inmobile-show">Size :</span> {{ product.p_selected_size.code | uppercase }}</p>
+          </div>
+          <div class="col-md-2">
+            <span class="inmobile-show">QTY  </span>
+            <input class="text-center" type="text" value="{{ product.p_quantity }}" disabled />
+          </div>
+          <div class="col-md-2">
+            <small>{{ product.c_currency }}</small>
+            <b class="font-30">
+              {{ product.p_quantity * product.p_originalprice }}
+            </b>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-6 col-xs-12 col-sm-12">
+            <small class="row utilities">
+              <a class="col-xs-3 col-sm-3" href="#editModal" ng-click="editDetails(product);" data-toggle="modal">EDIT</a> 
+              <a class="col-xs-3 col-sm-3" href="" ng-click="products.splice($index,1);updateCart();">REMOVE</a>
+              <a class="col-xs-3 col-sm-3" href="">SAVE FOR LATER</a>
+            </small>
+          </div>
+          <div class="col-md-2"></div><div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+
+
+<div class="edit-modal modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        &#10006;
+      </div>
+      <div class="container">
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-md-6 edit-details text-center">
+                <p>{{ details_p_name | uppercase }}</p>
+                <small>{{ details_c_currency }}</small> 
+                <b>{{ selectedQuantity * details_p_originalprice }} </b><br><br>
+                <span ng-repeat="x in details_p_available_options.colors" class="">
+                  <small>{{ x.name }}</small>
+                </span><br>
+                <span ng-repeat="x in details_p_available_options.colors">
+                  <span 
+                  style="margin: 0 15px; width:10px;display: inline-block;height:10px;background-color:{{ x.hexcode }}"></span>
+                </span>
+
+                <!-- Dropdown section -->
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-3">
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{selectedSize}}
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li ng-repeat="x in details_p_available_options.sizes">
+                          <a ng-click="setSize(x.code);">{{ x.code }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{selectedQuantity}}
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li ng-repeat="x in details_p_quantity">
+                          <a ng-click="setQuantity(x);">{{ x }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3"></div>
+                </div>
+
+                <!-- Button section -->
+                <button class="btn btn-lg btn-primary" 
+                ng-click="updateDetails(selectedSize, selectedQuantity, details_p_id, details_p_originalprice);">EDIT</button><br><br>
+
+                <a href="">see product details</a>
+              </div>
+              <div class="col-md-6 text-left modal-img">
+                <img src="{{ details_p_src }}">
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<section class="row checkout-section">
+  <div class="col-md-4 contact-details">
+    <strong>Need help or have questions?</strong><br>
+    <p>Call Customer Service at</p>
+    <p>1-800-555-5555</p><br>
+    <p><a>Chat with one of our stylists</a></p>
+    <p><a>See return and exchange policies</a></p>
+  </div>
+  <div class="col-md-8 col-xs-12">
+    <section class="row promo-section">
+      <div class="col-md-4">ENTER PROMOTION CODE OR GIFT CARD</div>
+      <div class="col-md-4 col-xs-8">
+        <input class="form-control" ng-model="promo_code" type="text" >
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <button class="btn btn-default" ng-click="applyCode();">APPLY</button>
+      </div>
+    </section>
+    <section class="row total-section">
+      <!-- Subtotal row -->
+      <div class="row">
+        <div class="col-md-8 col-xs-8">SUBTOTAL</div>
+        <div class="col-md-4 col-xs-4 text-center">
+          $ <b class="font-30">{{total}}</b> 
+          <p>( after {{ discount_rate }} discount )</p>
+        </div><br/><br/>
+      </div>
+
+      <!-- Promo code row -->
+      <div class="row" ng-init="promo_applied = false;" ng-show="promo_applied">
+        <div class="col-md-6 col-xs-6">PROMOTION CODE {{ promo_name }} APPLIED</div>
+        <div class="col-md-2 col-xs-2 text-right"><b class="font-30">-</b></div>
+        <div class="col-md-4 col-xs-4 text-center">
+          $<b class="font-30"> {{ promo_discount | number:2 }} </b>
+        </div><br/><br/>
+      </div>
+
+      <!-- Estimated Shiping row -->
+      <div class="row">
+        <div class="col-md-8 col-xs-8">ESTMATED SHIPPING*</div>
+        <div class="col-md-4 col-xs-4 text-center">FREE</div><br/>
+      </div>
+
+      <!-- Estimated total row -->
+      <div class="row line-30 estimated-total-row">
+        <div class="col-md-8 col-xs-8">ESTMATED TOTAL</div>
+        <div class="col-md-4 col-xs-4 text-center">$ <b class="font-30">
+          {{ total - promo_discount }}</b>
+        </div><br/>
+      </div>
+    </section>
+
+    <!-- Secure Section -->
+    <section class="row secure-section">
+      <div class="col-md-8 col-xs-12 line-30"><a>CONTINUE SHOPPING</a></div>
+      <div class="col-md-4 col-xs-12"><button class="btn btn-primary">CHECKOUT</button></div><br/><br/><br/>
+      <img src="/images/lock.jpg"> <span>Secure checkout. Shopping is always safe & secure</span>
+    </section>
+  </div>
+</section>

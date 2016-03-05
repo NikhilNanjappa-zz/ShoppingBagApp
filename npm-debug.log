@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/Users/nnanjappa/.nvm/v0.10.38/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-ui-bootstrap' ]
+2 info using npm@2.14.1
+3 info using node@v0.10.38
+4 verbose install initial load of /Users/nnanjappa/Projects/test2/package.json
+5 warn package.json sapient@0.0.0 No license field.
+6 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt/package.json
+7 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-autoprefixer/package.json
+8 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-concurrent/package.json
+9 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-clean/package.json
+10 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-compass/package.json
+11 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-concat/package.json
+12 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-connect/package.json
+13 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-copy/package.json
+14 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-cssmin/package.json
+15 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-htmlmin/package.json
+16 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-imagemin/package.json
+17 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-jshint/package.json
+18 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-uglify/package.json
+19 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-contrib-watch/package.json
+20 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-filerev/package.json
+21 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-google-cdn/package.json
+22 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-karma/package.json
+23 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-newer/package.json
+24 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-ng-annotate/package.json
+25 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-svgmin/package.json
+26 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-usemin/package.json
+27 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/grunt-wiredep/package.json
+28 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/jasmine-core/package.json
+29 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/jshint-stylish/package.json
+30 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/karma/package.json
+31 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/karma-jasmine/package.json
+32 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/karma-phantomjs-launcher/package.json
+33 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/load-grunt-tasks/package.json
+34 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/phantomjs/package.json
+35 verbose installManyTop reading scoped package data from /Users/nnanjappa/Projects/test2/node_modules/time-grunt/package.json
+36 info package.json grunt@0.4.5 No license field.
+37 info package.json grunt-contrib-clean@0.6.0 No license field.
+38 info package.json grunt-contrib-concat@0.5.1 No license field.
+39 info package.json grunt-contrib-connect@0.9.0 No license field.
+40 info package.json grunt-contrib-copy@0.7.0 No license field.
+41 info package.json grunt-contrib-cssmin@0.12.3 No license field.
+42 info package.json grunt-contrib-htmlmin@0.4.0 No license field.
+43 info package.json grunt-contrib-imagemin@0.9.4 No license field.
+44 info package.json grunt-contrib-uglify@0.7.0 No license field.
+45 info package.json grunt-contrib-watch@0.6.1 No license field.
+46 info package.json grunt-filerev@2.3.1 license should be a valid SPDX license expression
+47 info package.json grunt-google-cdn@0.4.3 license should be a valid SPDX license expression
+48 info package.json grunt-svgmin@2.0.1 No license field.
+49 info package.json grunt-wiredep@2.0.0 No license field.
+50 verbose readDependencies loading dependencies from /Users/nnanjappa/Projects/test2/package.json
+51 silly cache add args [ 'angular-ui-bootstrap', null ]
+52 verbose cache add spec angular-ui-bootstrap
+53 silly cache add parsed spec { raw: 'angular-ui-bootstrap',
+53 silly cache add   scope: null,
+53 silly cache add   name: 'angular-ui-bootstrap',
+53 silly cache add   rawSpec: '',
+53 silly cache add   spec: '*',
+53 silly cache add   type: 'range' }
+54 silly addNamed angular-ui-bootstrap@*
+55 verbose addNamed "*" is a valid semver range for angular-ui-bootstrap
+56 silly addNameRange { name: 'angular-ui-bootstrap', range: '*', hasData: false }
+57 silly mapToRegistry name angular-ui-bootstrap
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry http://registry.npmjs.org/
+60 silly mapToRegistry uri http://registry.npmjs.org/angular-ui-bootstrap
+61 verbose addNameRange registry:http://registry.npmjs.org/angular-ui-bootstrap not in flight; fetching
+62 verbose request uri http://registry.npmjs.org/angular-ui-bootstrap
+63 verbose request no auth needed
+64 info attempt registry request try #1 at 17:21:54
+65 verbose request id 10aca432bcedf70a
+66 http request GET http://registry.npmjs.org/angular-ui-bootstrap
+67 info retry will retry, error on last attempt: Error: socket hang up
+68 info attempt registry request try #2 at 17:22:06
+69 http request GET http://registry.npmjs.org/angular-ui-bootstrap
+70 info retry will retry, error on last attempt: Error: socket hang up
+71 info attempt registry request try #3 at 17:23:06
+72 http request GET http://registry.npmjs.org/angular-ui-bootstrap
+73 verbose stack Error: socket hang up
+73 verbose stack     at createHangUpError (http.js:1473:15)
+73 verbose stack     at Socket.socketOnEnd [as onend] (http.js:1569:23)
+73 verbose stack     at Socket.g (events.js:180:16)
+73 verbose stack     at Socket.emit (events.js:117:20)
+73 verbose stack     at _stream_readable.js:944:16
+73 verbose stack     at process._tickCallback (node.js:448:13)
+74 verbose cwd /Users/nnanjappa/Projects/test2
+75 error Darwin 15.3.0
+76 error argv "node" "/Users/nnanjappa/.nvm/v0.10.38/bin/npm" "install" "angular-ui-bootstrap"
+77 error node v0.10.38
+78 error npm  v2.14.1
+79 error code ECONNRESET
+80 error network socket hang up
+80 error network This is most likely not a problem with npm itself
+80 error network and is related to network connectivity.
+80 error network In most cases you are behind a proxy or have bad network settings.
+80 error network
+80 error network If you are behind a proxy, please make sure that the
+80 error network 'proxy' config is set properly.  See: 'npm help config'
+81 verbose exit [ 1, true ]
